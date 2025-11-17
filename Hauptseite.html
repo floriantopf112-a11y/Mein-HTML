@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webseite mit Tabs – McLaren Style</title>
+  <style>
+    :root {
+      --papaya: #FF8700;
+      --black: #0C0C0C;
+      --text-light: #f2f2f2;
+    }
+
+    header {
+        height: 200px;
+     }
+
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--black);
+      margin: 0;
+      padding: 0;
+      color: var(--text-light);
+    }
+
+    .navbar {
+      display: flex;
+      background: var(--black);
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(255, 135, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .tablink {
+      background: var(--black);
+      color: var(--papaya);
+      border: none;
+      outline: none;
+      padding: 14px 24px;
+      cursor: pointer;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .tablink:hover {
+      background: var(--papaya);
+      color: var(--black);
+    }
+
+    .active {
+      background: var(--papaya) !important;
+      color: var(--black) !important;
+      font-weight: bold;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 40px;
+      background: #111;
+      animation: fadeEffect 0.5s;
+      max-width: 1000px;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 135, 0, 0.2);
+    }
+
+    @keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    h2 {
+      color: var(--papaya);
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    /* Galerie-Stil */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 135, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(12, 12, 12, 0.85);
+      color: var(--papaya);
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 135, 0, 0.2);
+    }
+
+    footer span {
+      color: var(--papaya);
+    }
+    header img {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Tab5 {
+    display: flex;
+    gap: 20px;
+}
+
+.senna-left {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.senna-left img {
+    max-width: 300px;
+    height: auto;
+}
+
+#Tab5 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden; /* verhindert, dass Fehlerhafte Boxen sichtbar werden */
+}
+
+    
+  </style>
+</head>
+<body>
+    <header> 
+        <img src="mclaren-logo-symbol-wei-vector-46088971 - bearbeitet.png" height="100px"  alt="Mclaren Team Logo">
+        
+    </header>
+
+  <div class="navbar">
+    <button class="tablink active" onclick="openTab(event, 'HauptTab')">Hauptmenü</button>
+    <button class="tablink" onclick="openTab(event, 'Tab1')">Geschichte</button>
+    <button class="tablink" onclick="openTab(event, 'Tab2')">Unser Team</button>
+    <button class="tablink" onclick="openTab(event, 'Tab3')">Die Zukunft</button>
+    <button class="tablink" onclick="openTab(event, 'Tab4')">Season Standings</button>
+    <button class="tablink" onclick="openTab (event, 'Tab5')"> Ayrton Senna, Legende der F1</button>
+  </div>
+
+  <!-- Hauptmenü -->
+  <div id="HauptTab" class="tabcontent" style="display:block;">
+    <h2>Willkommen bei McLaren F1</h2>
+    <p>
+      Das <strong>McLaren Formula 1 Team</strong> zählt zu den legendärsten Rennställen in der Geschichte des Motorsports. 
+      Gegründet im Jahr <strong>1963</strong> von dem neuseeländischen Rennfahrer <strong>Bruce McLaren</strong>, 
+      steht der Name McLaren seit über sechs Jahrzehnten für Innovation, Geschwindigkeit und technologische Exzellenz.
+    </p>
+    <p>
+      McLaren debütierte 1966 in der Formel 1 und entwickelte sich rasch zu einem der erfolgreichsten Teams der Welt. 
+      In den 1970er- und 1980er-Jahren erlebte McLaren eine goldene Ära – mit Fahrern wie <strong>Emerson Fittipaldi</strong>, 
+      <strong>James Hunt</strong> und später den legendären Duellen zwischen <strong>Ayrton Senna</strong> und <strong>Alain Prost</strong>. 
+      Diese Rivalität schrieb Motorsportgeschichte und machte McLaren zu einer globalen Ikone.
+    </p>
+    <p>
+      Mit insgesamt <strong>über 180 Grand-Prix-Siegen</strong>, <strong>8 Konstrukteurs-Weltmeisterschaften</strong> 
+      und <strong>12 Fahrer-Titeln</strong> zählt McLaren zu den erfolgreichsten Teams in der Formel-1-Geschichte. 
+      Die Marke verkörpert nicht nur Tradition, sondern auch stetige Weiterentwicklung – von der 
+      <em>McLaren Technology Centre</em> in Woking (Großbritannien) aus wird an den Rennwagen der Zukunft gearbeitet.
+    </p>
+    <p>
+      Heute fährt McLaren mit einem neuen Spirit: jung, dynamisch und voller Leidenschaft. 
+      Fahrer wie <strong>Lando Norris</strong> und <strong>Oscar Piastri</strong> repräsentieren die nächste Generation – 
+      schnell, fokussiert und bereit, die Papaya-Farben zurück an die Spitze der Formel 1 zu bringen.
+    </p>
+    <p>
+      Unter der Leitung von <strong>CEO Zak Brown</strong> und Teamchef <strong>Andrea Stella</strong> befindet sich McLaren in einer neuen Aufschwungphase, 
+      die von technischer Innovation, Nachhaltigkeit und einem klaren Ziel geprägt ist: 
+      den Weg zurück zum Siegertreppchen – ganz im Geiste von Bruce McLaren, 
+      der einst sagte: <em>„Life is measured in achievement, not in years alone.“</em>
+    </p>
+  </div>
+
+  <!-- Geschichte -->
+  <div id="Tab1" class="tabcontent">
+    <h2>Geschichte</h2>
+    <p>Ein Blick auf die Legenden, die McLaren geprägt haben – Fahrer, Autos und Momente, die Motorsportgeschichte schrieben.</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="McLarenBruce.jpg" alt="Bruce McLaren 1966">
+        <div class="overlay">Bruce McLaren – Gründer und Visionär des Teams (1966)</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="J._Hunt_in_1977_(cropped).jpg" alt="James Hunt 1976">
+        <div class="overlay">James Hunt – Weltmeister 1976 im McLaren M23</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Ayrton_Senna_Pesawat_RC_Cropped.jpg" alt="Ayrton Senna 1989">
+        <div class="overlay">Ayrton Senna – Dreifacher Weltmeister mit McLaren</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Mika_Häkkinen_Champions_for_Charity_2016-07-27.jpg" alt="Mika Häkkinen 1998">
+        <div class="overlay">Mika Häkkinen – Doppelweltmeister 1998 & 1999</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="2713067-56083370-2560-1440.jpg" alt="Lewis Hamilton 2008">
+        <div class="overlay">Lewis Hamilton – Weltmeister 2008 im MP4-23</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="GP2301_122754_ONZ2095.jpg" alt="McLaren MCL60 2023">
+        <div class="overlay">Lando Norris im MCL60 – Die neue Generation McLaren</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unser Team -->
+  <div id="Tab2" class="tabcontent">
+    <h2>Unser Team</h2>
+    <p>Hier finden sie unsere Fahrer und unser Restlichen Team</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="2025_lando_team_pic_02.webp" alt="Lando Norris">
+        <div class="overlay">Lando Norris – 26 Jahre alt, Startnummer 4 (2025)</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="2025_oscar_team_pic_02.webp" alt="Oscar Piastri">
+        <div class="overlay">Oscar Piastri – 24 Jahre alt, Startnummer 81 (2025)</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Zak_Brown_Goodwood_Festival_of_Speed_2021_(cropped).jpg" alt="Zak Brown">
+        <div class="overlay">Zak Brown – 54 Jahre alt, CEO McLaren Formula One (2025)</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="andrea-mtc-article-cover-square.webp" alt="Andrea Stella">
+        <div class="overlay">Andrea Stella – 54 Jahre alt, Teamchef McLaren Formula One (2025)</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Pato_O'Ward_(2021).jpg" alt="Pato O'Ward">
+        <div class="overlay">Pato O'Ward – 26 Jahre alt, Erfolgreicher Indycar Fahrer (2025)</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="ella-announcement-2-v2.webp" alt="Ella Lloyd">
+        <div class="overlay">Ella Lloyd – 20 Jahre alt, Formula One Academy Fahrerin (2025)</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="matteo-de-palo-article-cover-square-v1.webp" alt="Matteo de Palo">
+        <div class="overlay">Matteo de Palo – 18 Jahre alt, FIA Formula 3 Fahrer (2025)</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="ddp-headshots-2025_0003_jb1_7456.webp" alt="Ugo Ugochukwu">
+        <div class="overlay">Ugo Ugochukwu – 18 Jahre alt, FIA Formula 3 Fahrer (2025)</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="headshot-ddp-2025_brando.webp" alt="Brando Badoer">
+        <div class="overlay">Brando Badoer – 19 Jahre alt, FIA Formula 3 Fahrer (2025)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Die Zukunft -->
+  <div id="Tab3" class="tabcontent">
+    <h2>Die Zukunft von McLaren</h2>
+    <p>
+      Das <strong>McLaren Formula 1 Team</strong> arbeitet hart an der Zukunft. Mit den kommenden 
+      <strong>FIA Regulation Changes 2026</strong> bekommt der Sport das erste Mal seit 2022 umfassende Reformen. 
+      Doch diesmal nicht nur in der <strong>Aerodynamik</strong>, wie es 2022 der Fall war – 
+      bei den umfassenden Regeländerungen von 2026 wird das komplette Auto quasi <strong>neu erfunden</strong>.
+    </p>
+
+    <p>
+        Die Autos werden nicht nur <strong >Kleiner und Leichter</strong> sondern auch schneller, 
+        Die <strong> MGU </strong> (Motor Generator Unit) besteht ab 2026 aus 50% Benzin und 50% Elektromotor
+        Dazu wird das allbekannte <strong> DRS</strong> (Drag Reduction System) durch das neue <strong> MOM</strong> (Manual Override Mode)
+        ersetzt.
+    </p>
+
+    <p> 
+        Es gibt zudem Allgemeine Kritik an den Regeländerungen, Formel 1 Weltmeister <strong> Lewis Hamilton</strong> kritisierte nach einer
+        Testfahrt im <strong> FIA Probewagen</strong> das dass Fahrzeug sämtliche zusätzliche Energie aus dem <strong> MOM</strong>
+        System bereits auf der ersten Gerade (also der Pitlane Straight) verbraucht. Durch diesen hohen Verbrauch auf der ersten Gerade bleibt
+        für den Rest der Runde wenig bis <strong>gar keine zusätzliche Energie </strong> übrig. 
+       </p>
+
+       <p> 
+        Laut Hamilton ist das Auto dann auf dem Rest der Runde <strong> Langsamer als ein Formel 2 Auto</strong> Dazu kritisierte er den radikalen
+        Umschwung von 50% der Leistung in einen <strong> Seperaten Elektromotor </strong> seiner Meinung nach gebe es für Elektrische Fahrzeuge 
+        bereits die <strong> Formula E.</strong>
+       </p>
+  </div>
+
+  <!-- Season Standings -->
+  <div id="Tab4" class="tabcontent">
+    <h2>Season Standings</h2>
+    <p>
+       <ul> 
+        1. <strong>Norris,Lando (Mclaren F1) 390pts </strong> <br> <br>
+        2. <strong> Piastri, Oscar (Mclaren F1) 366pts </strong><br> <br>
+        3. Verstappen Max (Oracle Red Bull Racing) 341pts <br><br>
+        4. Russel, George (Mercedes AMG Petronas) 276pts <br><br>
+        5. Leclerc Charles (Scuderia Ferrari HP) 214pts <br><br>
+        6. Hamilton, Lewis (Scuderia Ferrari HP) 148pts <br><br>
+        7. Andrea Antonelli, Kimi (Mercedes AMG Petronas) 122pts <br><br>
+        8. Albon, Alexander (Atlassian Williams Racing) 73pts <br><br>
+        9. Hulkenberg, Nico (Stake Kick Sauber Racing) 43pts <br><br>
+        10. Hadjar, Isack (Visa Cash App Racing Bulls) 43pts <br><br>
+        11. Bearman, Oliver (Moneygram Haas F1) 40pts <br><br>
+        12. Alonso, Fernando (Aramco Aston Martin Racing)n 40pts <br><br>
+        13. Sainz, Carlos Jr. (Atlassian Williams Racing) 38pts <br><br>
+        14. Lawson, Liam (Visa Cash App Racing Bulls) 36pts <br><br>
+        15. Stroll, Lance (Aramco Aston Martin Racing) 32pts <br><br>
+        16. Ocon, Esteban (Moneygram Haas F1) 30pts <br><br>
+        17. Tsunoda, Yuki (Oracle Red Bull Racing) 28pts <br><br>
+        18. Gasly, Piere (BWT Alpine Racing) 22pts <br><br>
+        19. Bortoleto, Gabi (Stake Kick Sauber Racing) 19pts <br><br>
+        20. Colapinto, Franco (BWT Alpine Racing) 0pts <br><br>
+        21. Doohan, Jack (Vertagslos) 0pts <br><br>
+
+       </ul>
+    </p>
+  </div>
+  <div id="Tab5" class="tabcontent">
+    <h2>Ayrton Senna, Legende der F1</h2>
+
+    <p>
+        Ayrton Senna Da Silva wurde am 21. März 1960 in Sao Paulo, Brasilien geboren. 
+        Als Kind war er leidenschaftlicher Kartfahrer, sollte später aber die Automobilfabrik seines Vaters übernehmen. 
+        Mit 13 Jahren fuhr Senna das erste offizielle Rennen und wurde 1977 und 1978 südamerikanischer Kartmeister. 
+        Außerdem wurde er von 1978 bis 1981 viermal brasilianischer Kartmeister. 1981 ging er in der britischen Formel Ford 1600 an den Start.
+    </p>
+
+    <div class="gallery-item senna-left">
+        <img src="Ayrton_Senna_Beginning_-_Formula_Ford_1981,_Van_Diemen.jpg" height="100px" alt="Senna Formel Ford">
+        <div class="overlay">Ayrton Senna im Formel Ford Wagen des Teams Van Diemen</div>
+    </div>
+
+    <h3>Ayrton Senna Da Silva in der Formula Ford</h3>
+    <p>
+        1981 gewann er in der Formel Ford 1600 überlegen mit 12 aus 19 Rennen die Meisterschaft. 
+        1982 stieg er in die Formel Ford 2000 auf, gewann 21 von 27 Rennen und sicherte sich auch dort die Meisterschaft.
+    </p>
+
+    <h3>Aus Da Silva wird Senna</h3>
+    <p>
+        Ab 1983 fuhr Senna in der britischen Formel 3 und gewann diese direkt auf Anhieb nach einem Kampf mit <strong>Martin Brundle</strong>. 
+        Ende 1983 absolvierte er Testfahrten für <strong>William Brabham, McLaren und Toleman</strong>. Überraschend unterschrieb er bei Toleman einen 3-Jahres-Vertrag. 
+        Später sagte er: <strong>„Ich wollte die Nummer 1 in einem zweitklassigen Team sein, anstatt als Neuling der zweite Fahrer in einem Top-Team zu sein.“</strong>
+    </p>
+
+    <div class="gallery-item senna-left">
+        <img src="Toleman_TG184_Senna_Donington_Grand_Prix_Collection.jpg" height="100px" alt="Toleman TG184">
+        <div class="overlay">Sennas Toleman TG184 aus der Saison 1984</div>
+    </div>
+
+        <p>
+            
+        </p>
+
+</div>
+
+</div>
+
+
+  <footer>
+    <p>Designed in <span>Dresden</span> – Capital of Saxony</p>
+  </footer>
+
+  <script>
+    function openTab(evt, tabName) {
+      let i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+
+</body>
+</html>

@@ -69,6 +69,30 @@
       box-shadow: 0 0 20px rgba(255, 135, 0, 0.2);
     }
 
+    /* --- SENNA TAB COLORS ADDED --- */
+    #Tab5 {
+      background: linear-gradient(135deg, #005BBB, #F7D117, #009739);
+      color: #000;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    }
+
+    #Tab5 h2, #Tab5 h3, #Tab5 h4 {
+      color: #000;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+    }
+
+    #Tab5 p {
+      color: #000;
+      font-weight: 600;
+    }
+
+    #Tab5 .overlay {
+      background: rgba(0,0,0,0.65);
+      color: #F7D117;
+    }
+    /* --- END SENNA COLORS --- */
+
     @keyframes fadeEffect {
       from {opacity: 0;}
       to {opacity: 1;}
@@ -135,8 +159,6 @@
       color: #999;
       font-size: 14px;
       border-top: 1px solid rgba(255, 135, 0, 0.2);
-      line-height: 5px;
-      max-height: auto;
     }
 
     footer span {
@@ -150,7 +172,9 @@
 
 #Tab5 {
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    overflow: hidden;
 }
 
 .senna-left {
@@ -164,15 +188,19 @@
     height: auto;
 }
 
-#Tab5 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    overflow: hidden; /* verhindert, dass Fehlerhafte Boxen sichtbar werden */
+.senna-right {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 
-    
+.senna-right img {
+    max-width: 300px;
+    height: auto;
+}
+
   </style>
+
 </head>
 <body>
     <header> 
@@ -374,7 +402,7 @@
        </ul>
     </p>
   </div>
-  <div id="Tab5" class="tabcontent" style="display: none;">
+  <div id="Tab5" class="tabcontent">
     <h2>Ayrton Senna, Legende der F1</h2>
 
     <p>
@@ -402,15 +430,152 @@
         Später sagte er: <strong>„Ich wollte die Nummer 1 in einem zweitklassigen Team sein, anstatt als Neuling der zweite Fahrer in einem Top-Team zu sein.“</strong>
     </p>
 
-    <div class="gallery-item senna-left">
+    <div class="gallery-item senna-right">
         <img src="Toleman_TG184_Senna_Donington_Grand_Prix_Collection.jpg" height="100px" alt="Toleman TG184">
         <div class="overlay">Sennas Toleman TG184 aus der Saison 1984</div>
     </div>
 
         <p>
-            
+        Die Erste Meisterleistung in der Formel 1 gelang Senna im 1984 Monaco Grand Prix, während starkem Regen
+        drehten sich viele Topfahrer aus dem Feld doch Senna fuhr aus dem hinteren Feld bis auf Position Zwei 
+        in den letzten Runden kam er Alain Prost dem Erstplatzierten McLaren Fahrer immer näher, dadurch das dass
+        Rennen wegen des starken Regens abgebrochen wurde konnte Senna, Prost nicht mehr überholen doch er belegte 
+        in einem Minderwertigen Auto einen Phänomenale Zweiten Platz. 
+        </p>
+        <br> <br> <br>
+        <h3> Senna bei Lotus</h3>
+        <p>
+            Nach seinem Rennen in Monaco bekam Senna ein Angebot des damaligen Top-Teams Lotus, Sein Vater kaufte
+            Senna aus seinem Vertrag bei Toleman frei, daraufhin durfte Senna beim nächsten Rennen dem Italien Grand Prix
+            Nicht antreten nach einem Mieserablen Ergebnis von seinem Ersatz durfte Senna noch die letzten beiden Rennen
+            antreten. 
+        </p>
+        <div class="gallery-item senna-left">
+                <img src="Lotus_99T_front-left_2012_Autosport_International.jpg" height="100px" alt="Lotus von Senna">
+                <div class="overlay"> Sennas Lotus 99T aus der 1987 Saison</div>
+        </div>
+        <p> 
+            Bei Lotus fuhr Senna in der Saison 1985 bereits beim zweiten Rennen den Sieg ein und feierte so 
+            seinen ersten von 41 Siegen bis zum Jahr 1987 fuhr er noch 6 weitere Siege für Lotus ein es waren 
+            die letzten des Britischen Traditions Rennstall, Für die Saison 1987 sicherte Lotus, Senna den Nummer 1 
+            Status zu. Sein Unnachgiebiger und Kompromissloser Fahrstil brachte ihm Ansehen aber auch viel Missbilligung
+            ein, vorallem beim bisherigen brasilianischen Publikumsliebling Nelson Piquet und dem Britten Nigel Mansell
+            mit dem er sich harte und unbarmherzige Duelle lieferte.
         </p>
 
+    <h3> Senna bei McLaren </h3>
+    <p> Für die Saison 1988 sicherte sich Senna einen Vertrag bei McLaren, Durch den Motoren Wechsel von McLaren die vom TAG-Porsche Motor 
+        zum Honda Motor wechselten war das Team die gesamte Saison haushoch überlegen sie gewannen 15 von 16 Rennen Während dieser Saison 
+        verschlechterte sich das Verhältnis zwischen Senna und Prost, durch die bis 1990 aktive "Streichresultat" Regel die dafür sorgte das 
+        die schlechtesten 5 Rennen nicht in die Wertung zählten verlor Prost die Weltmeisterschaft an Senna. </p>
+        <div class="gallery-item senna-right"> 
+            <img src="Senna_1988.jpg" height="100px" alt="Senna 1988">
+            <div class="overlay"> Senna in seinem MP4/4 1988</div>
+        </div>
+        <p> In der Saison 1989 spitzte sich die Lage zwischen Prost und Senna weiterhin zu, Dieser Konflikt ging soweit das die beiden Fahrer 
+            nur noch über dritte miteinander kommunizierten. Beim Großen Preis von Japan auf der Suzuka Strecke kollidierten Senna und Prost, Prost
+            gab das Rennen auf Senna hingegen ließ sich von Stewards wieder auf die Strecke schieben und gewann nach einem Boxenstopp das Rennen. 
+            Letzendlich wurde er von der FISA (FIA) disqualifiziert aufgrund das er die Schikane in der er mit Prost kollidierte abgekürzt hatte
+            Senna war außersich und warf der FISA (FIA) Manipulation vor, dies hatte zur Folge das Senna die Formel 1 Lizenz für das Jahr 1990 verwehrt wurde
+    	 </p>
+         <div class="gallery-item senna-left">
+                <img src="images (17).jfif" height="100px" alt="SennaProst89">
+                <div class="overlay"> Senna kollidiert mit Prost im 1989 Japan GP</div>
+         </div>
+         <p>
+            1990 und 1991 trat er wieder für McLaren-Honda an und gewann zwei weitere Male den Weltmeistertitel. 
+            Prost war inzwischen zu Ferrari gewechselt. Dabei kam es beim Großen Preis von Japan 1990 abermals zu einer Kollision zwischen Senna und Prost.
+             Vor dem Qualifying hatten die Rennkommissare Sennas Bitte entsprochen, die Pole-Position von der Fahrbahninnenseite auf die Außenseite zu verlegen,
+              da bereits in den beiden Vorjahren zu erkennen war, dass der Fahrer auf der Fahrbahninnenseite durch den dort vorhandenen
+               Schmutz Nachteile beim Start hatte. 
+               Nachdem Senna im Qualifying die schnellste Runde gefahren war, entschied die FISA, 
+               den ersten Startplatz auf der Fahrbahninnenseite zu belassen und keine Änderung der Startplätze vorzunehmen.
+                Prost konnte beim Rennstart den Traktionsvorteil der Ideallinie nutzen und ging in Führung,
+                 Senna drängte ihn jedoch in der ersten Kurve absichtlich ab, wie er ein Jahr später zugab.
+                  Dieses Mal hätte Prost gewinnen müssen, um seine WM-Chancen zu wahren. 
+                  Dieser Vorfall brachte die Rivalität zwischen Senna und Prost zur Eskalation. Nach dem Rennen in Suzuka erklärte Prost:
+                    <strong> “Everything that has happened here has shown the world his real face. For him it is much more important to win the championship than it is for me.
+                         It is the only thing he has in life. He is completely screwed up. This man has no value.”</strong>
+                </p>
+                <div class="gallery-item senna-right">
+                <img src="Senna-and-Prost-Suzuka-1990.jpg" height="100px" alt="SennaProst90">
+                    <div class="overlay"> Senna kollidiert absichtlich mit Prosts Ferrari</div>
+                </div>
+
+
+                <h3> Williams Dominanz </h3>
+<p> 
+    1992 und 1993 war Senna gegen die überlegenen Autos des Williams-Teams chancenlos, das 1992 mit Mansell und 1993 mit Prost 
+    Weltmeister wurde. Da sich Honda nach der Saison 1992 aus der Formel 1 zurückzog, musste McLaren im folgenden Jahr mit den
+     unterlegenen Ford-Kundenmotoren antreten. Prost unterschrieb bei Williams einen Vertrag, der ihm zusicherte, dass Senna nicht 
+     sein Teamkollege wurde. Da dieser für 1993 kein Cockpit eines guten Teams mehr in Aussicht hatte, willigte er ein, für eine Million 
+     Dollar pro Rennen für McLaren an den Start zu gehen. Erst zu Saisonmitte unterschrieb Senna einen Vertrag für den Rest der Saison
+      und stand damit für Testfahrten zur Verfügung. Der Große Preis von Europa in Donington Park wurde 1993 zu einem der besten Rennen 
+      in der Karriere Sennas: Im strömenden Regen überholte er bereits in der ersten Runde vier Gegner, so dass er als Führender aus
+       dieser Runde zurückkam. Statt wie die meisten anderen Fahrer die Reifen wegen des ständig wechselnden Wetters bis zu siebenmal
+        zu wechseln, wechselte er sie lediglich viermal und gewann das Rennen mit deutlichem Vorsprung. Beim Großen Preis von
+         Australien kam es in Adelaide zu einer versöhnlichen Geste zwischen Senna und Prost, der seine Karriere beendete:
+          Der siegreiche Brasilianer bat seinen zweitplatzierten Rivalen zu sich auf die oberste Stufe des Siegerpodests.
+</p>        
+
+        <div class="gallery-item senna-left">
+            <img src="images.jfif" height="100px" alt="SennaProst93">
+            <div class="overlay"> Senna bittet seinen Rivalen auf seine Stufe des Podiums nach dem er 1993 in Adelaide gewann. </div>
+        </div>
+
+        <h3> Senna bei Williams</h3>
+        <p> 
+            Noch während der Saison 1993 hatte Senna für die Saison 1994 bei Williams unterschrieben.
+             Bereits bei Testfahrten vor der Saison zeigte sich, dass die Regeländerungen im Bereich der elektronischen 
+             Fahrhilfen (Verbot von aktiven Fahrwerken, ABS, Traktionskontrollen und automatischen Getrieben) dem Williams-Team
+              den Wettbewerbsvorteil der vergangenen Jahre geraubt hatten. Dies verleitete Senna beim Saisonauftakt, dem Großen Preis
+               von Brasilien in Interlagos, zu einem Fahrfehler, als er sich in der 56. von 71 Runden auf Platz zwei liegend ins Aus
+                drehte. Senna erklärte, dass das Auto schwer zu beherrschen sei, da es einmal untersteuere, um gleich in der nächsten
+                 Kurve zu übersteuern. Beim zweiten Rennen, dem Großen Preis des Pazifiks, traf es Senna noch früher, er schied bereits
+                  in der ersten Kurve nach einer unverschuldeten Kollision aus. Da er trotz des geschmolzenen technischen Vorsprungs
+                   seines Teams als selbsterklärter Favorit in die Saison gestartet war und sein direkter Konkurrent Michael Schumacher
+                    die beiden ersten Rennen für sich entschieden hatte, stand Senna unter dem Erwartungsdruck, im dritten Rennen endlich
+                     seiner sportlichen Führungsrolle gerecht zu werden.
+        </p>
+        <div class="gallery-item senna-right">
+        <img src="Williams_FW16_front_2017_Williams_Conference_Centre.jpg" height="100px" alt="SennaFW16">
+            <div class="overlay"> Sennas Williams FW16 (Reproduktion) aus der Saision 1994 </div>
+        </div>
+
+        <h3> Sennas Tödlicher Unfall in Imola </h3>
+        <h4> Vorgeschichte</h4>
+        <p> 
+            Bereits im Vorfeld zum dritten Saisonrennen von 1994, dem Großen Preis von San Marino in Imola, 
+            hatten sich zwei schwere Unfälle ereignet: Rubens Barrichello brach sich im Freien Training am Freitag, 
+            29. April die Nase, Roland Ratzenberger verunglückte am Vormittag des 30. April tödlich.
+             Senna, der im Freitagsqualifying Erster geworden war, trat nach Ratzenbergers Tod nicht im Samstagsqualifying an.
+              Da in diesem niemand seine Zeit vom Vortag unterbot, ging er von der Pole-Position aus ins Rennen.
+            Beim Rennstart am 1. Mai fuhr Pedro Lamy mit hoher Geschwindigkeit auf den beim Start stehengebliebenen Wagen von JJ Lehto 
+            auf, was eine Safety-Car-Phase bis zum Ende der fünften Runde auslöste.
+        </p>
+
+        <h4> Der Unfall</h4>
+        <p> Beim Neustart blieb Senna in Führung vor Schumacher. In der siebten Runde kam Sennas Wagen in der 
+            schnellen Tamburello-Kurve von der Fahrbahn ab und schoss, voll bremsend und ohne erkennbare Lenkkorrektur,
+             geradeaus über den Seitenstreifen. Beim Aufprall in die Streckenbegrenzungsmauer riss das rechte Vorderrad ab,
+              wobei sich eine Strebe der Radaufhängung durch Sennas Helm bohrte. </p>
+              
+              <div class="gallery-item senna-left">
+                <img src="images (1).jfif" height="100px" alt="Sennacrash94">
+                <div class="overlay"> Senna fuhr mit knapp 200 Km/h in der Tamburello-Kurve geradeaus</div>
+              </div>
+
+              <p>
+              Abweichenden Medienberichten zufolge,
+               die sich auf den Rennarzt Sid Watkins berufen, wurde Sennas Kopf vom Vorderrad getroffen, wobei durch die Wucht
+                des Aufpralls alle großen Blutgefäße im Hirn durchtrennt wurden. Senna erlitt schwerste Kopfverletzungen
+                 und wurde mit dem Rettungshubschrauber direkt von der Unfallstelle in eine Unfallklinik in Bologna geflogen. 
+                 Dort wurde er einige Stunden später für hirntot erklärt.</p>
+                    <br>
+                 <h3> Ayrton Senna Da Silva wurde nur 34 Jahre alt, er hinterließ seine trauernde Familie und eine Trauernde 
+                    Nation. Sein Todestag
+                    am 1. Mai wurde zu einem Nationaler Volks-Trauertag in seiner Heimat Brasilien.
+                 </h3>
 </div>
 
 </div>
@@ -418,8 +583,6 @@
 
   <footer>
     <p>Designed in <span>Dresden</span> – Capital of Saxony</p>
-    <br>
-    <p>Made by <span>Alexander </span>& <span>Schnopf</span></p>
   </footer>
 
   <script>
